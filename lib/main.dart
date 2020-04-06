@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'Pages/Homepage.dart';
-import 'SplashScreen.dart';
+import 'Pages/SplashScreen.dart';
 
 void main() => (runApp(SmartMeter()));
 
@@ -18,6 +18,9 @@ class _SmartMeterState extends State<SmartMeter> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+      theme: ThemeData(
+        fontFamily: 'Ubuntu'
+      ),
     );
   }
 }

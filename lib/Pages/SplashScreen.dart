@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Pages/Homepage.dart';
+import 'Homepage.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -40,15 +41,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Image.asset(
-                          'assets/Smartlogo white.png'),
+                  SvgPicture.asset('assets/smart meter logo white.svg'),
                     Text(
                       'Smart Meter',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.none,
+                        decoration: TextDecoration.none, fontFamily: 'Ubuntu'
                       ),
                     ),
                   ],

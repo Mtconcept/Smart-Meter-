@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import 'UsageScree.dart';
 
 class Login extends StatefulWidget {
@@ -24,7 +24,10 @@ class _LoginState extends State<Login> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset('assets/logo gradient.png'),
+                      SvgPicture.asset(
+                        'assets/smart meter logo gradient .svg',
+                        color: Colors.amber,
+                      ),
                       Padding(
                         padding:
                             const EdgeInsets.only(top: 48, left: 24, right: 24),
@@ -32,11 +35,12 @@ class _LoginState extends State<Login> {
                           width: 320,
                           height: 56,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                  color: Color(0xff969393),
-                                  style: BorderStyle.solid,
-                                  width: 1.5)),
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                                color: Color(0xff969393),
+                                style: BorderStyle.solid,
+                                width: 1.5),
+                          ),
                           child: TextField(
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.only(left: 16.0),
@@ -80,11 +84,11 @@ class _LoginState extends State<Login> {
                               child: Text(
                                 'LOGIN',
                                 style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  letterSpacing: 2,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    letterSpacing: 2,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Ubuntu'),
                               ),
                             ),
                           ),
@@ -105,11 +109,11 @@ class _LoginState extends State<Login> {
                             child: Text(
                               'I Don’t Have a Meter ID',
                               style: TextStyle(
-                                color: Color(0xffFF542B),
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.underline,
-                              ),
+                                  color: Color(0xffFF542B),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.underline,
+                                  fontFamily: 'Ubuntu'),
                             ),
                           )
                         ],
